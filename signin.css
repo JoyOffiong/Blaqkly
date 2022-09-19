@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    margin: 5% auto;
+    /* background-color: rgb(161, 152, 152); */
+     width: 50%;
+   
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.logo{
+    text-align: center;
+    padding: 3% 0;
+}
+.wrapper{
+    border: 2px solid black; 
+    padding: 20px;
+   
+}
+.wrapper p{
+    padding-bottom: 20px;
+    font-size: 30px;
+    
+}
+.input-wrap{
+    /* width: 90%;  */
+   margin: auto;
+   
+}
+
+
+input{
+    height: 30px;
+    display:block;
+    width: 95%;
+
+    margin: 20px auto ;
+    border: 1px solid black;
+}
+input[placeholder]{
+  padding: 5px;
+}
+
+button{
+    padding: 7px;
+    color: white;
+    background-color: #000;
+    border: none;
+}
+button:hover{
+    transition: 0.3s ease;
+    color: #000;
+    background-color: #e5e5e5;
+}
+.forgot-password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.loginwrap{
+    margin: 5% auto;
+    /* background-color: rgb(161, 152, 152); */
+     width: 50%;
+   
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+.logo{
+    text-align: center;
+    padding: 3% 0;
+}
+.wrapper{
+    border: 2px solid black; 
+    padding: 20px;
+   
+}
+.wrapper p{
+    padding-bottom: 20px;
+    font-size: 30px;
+    
+}
+.input-wrap{
+    /* width: 90%;  */
+   margin: auto;
+   
+}
+
+
+input{
+    height: 30px;
+    display:block;
+    width: 95%;
+
+    margin: 20px auto ;
+    border: 1px solid black;
+}
+input[placeholder]{
+  padding: 5px;
+}
+.error{
+    border: red solid 1px;
+    color: red;
+}
