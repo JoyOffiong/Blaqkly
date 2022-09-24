@@ -9,7 +9,7 @@ form.addEventListener("submit", function (event) {
 
   const passwordField = form.elements["password"];
   const cpasswordField = form.elements["cpassword"];
-  const emailField= form.elements["email"]
+  // const emailField= form.elements["email"]
 
   //here we are comparing cpassword to password
 
@@ -22,56 +22,58 @@ form.addEventListener("submit", function (event) {
 
   //validate the strength of the password
 
-  if(validatePassword(passwordField)){
-    register(passwordField, emailField)
+  if (validatePassword(passwordField) && validateEmail() === 2) {
+    alert("GOD ABEG");
+    register(passwordField);
   }
-//  validateEmail(emailField)
- 
+  // if((validatePassword(passwordField))){
+  //   register(passwordField)
+
+  // }
 });
 
+function validateEmail() {
+  const emailField = form.elements["email"];
+
+  let existingInfo = JSON.parse(localStorage.getItem("users"))
+    ? JSON.parse(localStorage.getItem("users"))
+    : false;
+  alert(existingInfo);
+
+  if (existingInfo === false) {
+ chichi=2;
 
 
-//  function validateEmail(emailField){
-//   const firstNameField = form.elements["first name"];
-//   const lastNameField = form.elements["last name"];
-//   const emailField = form.elements["email"];
+  } else {
+    let chichi;
+    existingInfo.find((user) => {
+      check(user);
 
-//   const regData = {
-//     firstName: firstNameField.value,
-//     lastName: lastNameField.value,
-//     email: emailField.value,
-//     password: passwordField.value,
-//   };
+    });
+        return chichi
+    function check(user) {
+      if (user.email === emailField.value) {
+        alert("already exist");
+        showError(emailField, "email address already exists");
+      chichi=1;
+   
+      } 
+      else {
+       
+      chichi= 2;
+      
+      }
+    
+    }
 
-//   availableUser.push(regData)
+  }      
+ 
+}
 
-//  let firstTimer=  setData("users", availableUser)
-//   console.log(firstTimer)
-
-//   let usersInfo=   (firstTimer === undefined)? JSON.parse(localStorage.getItem("users")):[]
-//   // let usersInfo = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
-
-//   let v= usersInfo.find(user=>{ check(user) });
-// console.log(v)
-//  alert(false)
-//   function check(user) {
-  
-//   if(user.email === emailField.value)
-//   {
-//   showError(emailField, "email address already exists")
-//   return false
-//   }
-//   register(passwordField)
-//   return true   
-  
-//   }
-//  } 
-
-
-function register(passwordField, emailField) {
+function register(passwordField) {
   const firstNameField = form.elements["first name"];
   const lastNameField = form.elements["last name"];
-  // const emailField = form.elements["email"];
+  const emailField = form.elements["email"];
 
   const regData = {
     firstName: firstNameField.value,
@@ -79,56 +81,63 @@ function register(passwordField, emailField) {
     email: emailField.value,
     password: passwordField.value,
   };
-  //get existing data
-  let usersInfo =JSON.parse(localStorage.getItem("users"))
-  usersInfo = usersInfo== undefined ? JSON.parse(localStorage.getItem("users")) : []
 
+  let existingUserInfo = JSON.parse(localStorage.getItem("users"))
+    ? JSON.parse(localStorage.getItem("users"))
+    : [];
 
-  console.log(usersInfo)
-
-if (usersInfo ==undefined) {
-  // let users = JSON.parse(getData("users")) || [];
-  let users =  [];
-  users.push(regData);
-  setData("users", JSON.stringify(users));
-      
-  alert("registration successful, ");
+  existingUserInfo.push(regData);
+  localStorage.setItem("users", JSON.stringify(existingUserInfo));
 
   setTimeout(() => {
     window.location = "index.html";
   }, 10000);
-
-    }
-
-
-    
-    let v= usersInfo.find(user=>{ check(user) });
-    console.log(v)
-     
-      function check(user) {
-  
-      
-      if(user.email === emailField.value)
-      {
-      showError(emailField, "email address already exists")
-      return false
-      } 
-         let users =  [];
-  users.push(regData);
-  setData("users", JSON.stringify(users));
-      
-  alert("registration successful, ");
-
-  setTimeout(() => {
-    window.location = "index.html";
-  }, 10000);
-  
-  
-    
-     
 }
 
+/* //get existing data
+  let usersInfo = localStorage.getItem;
+  usersInfo = usersInfo === undefined ? JSON.parse(getData) : []
+ 
+  // let users = ;
+  if(usersInfo){
+    users.push(regData);
+    setData("users", JSON.stringify(users));
+       console.log(users) 
+    alert("registration successful, ");
+  
+    setTimeout(() => {
+      window.location = "Blaqkly/index.html";
+    }, 10000);
+  }
 
-}
+    }*/
 
+// else if (usersInfo === getData) {
 
+//   let v= usersInfo.find(user=>{ check(user) });
+//   console.log(v)
+
+//     function check(user) {
+
+//     if(user.email === emailField.value)
+//     {
+//     showError(emailField, "email address already exists")
+//     return false
+//     }
+//        let users =  [];
+// users.push(regData);
+// setData("users", JSON.stringify(users));
+
+// alert("registration successful, ");
+
+// setTimeout(() => {
+//   window.location = "index.html";
+// }, 10000);
+
+// console.log(check)
+
+// }
+
+// } else {
+//  return false
+// }
