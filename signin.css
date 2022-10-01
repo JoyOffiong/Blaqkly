@@ -17,6 +17,7 @@
 .wrapper{
     border: 2px solid black; 
     padding: 20px;
+   /* font-family: ; */
    
 }
 .wrapper p{
@@ -59,4 +60,7 @@ button:hover{
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+}
+.error{
+    color:red ;
 }

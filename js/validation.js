@@ -27,31 +27,3 @@
  }
 
 
-//  /*email verification */
-// function getValue(){
-//   return{ email: document.getElementById("email").value}
-// }
-
-// // let mail=  document.getElementById("email").value
- 
-//  export function validateEmail(emailField) {
-  
-//    let usersInfo= JSON.parse(localStorage.getItem("users"))
- 
-//    let{email}= getValue()
-
-//    console.log(email)
-
-//    usersInfo.forEach(user => {
-
-//      if(email == user.email){
-
-//       console.log(user.email)
-//    //   return exist=true
-//        return showError(emailField, "email address already exists")
-       
-//      }
-//    })
- 
-
-//    }
