@@ -34,7 +34,7 @@ let  checkData =  usersDB.find(user=>user.email==emailField.value &&
      
         // setData("session", JSON.stringify(checkData));
        
-            window.location = "index.html";
+            window.location = "wishlist.html";
        
   
 

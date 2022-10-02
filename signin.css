@@ -3,12 +3,8 @@
     padding: 0;
 }
 .wrap{
-    margin: 5% auto;
-    /* background-color: rgb(161, 152, 152); */
+    margin: 15% auto;
      width: 50%;
-   
-    /* margin-left: auto; */
-    /* margin-right: auto; */
 }
 .logo{
     text-align: center;
@@ -32,7 +28,7 @@
 }
 
 
-input{
+.inputbar{
     height: 30px;
     display:block;
     width: 95%;
@@ -40,7 +36,7 @@ input{
     margin: 20px auto ;
     border: 1px solid black;
 }
-input[placeholder]{
+.inputbar[placeholder]{
   padding: 5px;
 }
 
@@ -63,4 +59,11 @@ button:hover{
 }
 .error{
     color:red ;
+}
+
+@media(max-width:1200px){
+    .wrap{
+        margin: 30% auto;
+         width: 70%;
+    }
 }

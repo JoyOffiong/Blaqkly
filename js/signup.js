@@ -73,7 +73,7 @@ function register(passwordField) {
   existingUserInfo.push(regData);
   localStorage.setItem("users", JSON.stringify(existingUserInfo));
 
-    window.location = "index.html";
+    window.location = "signin.html";
 
 }
 

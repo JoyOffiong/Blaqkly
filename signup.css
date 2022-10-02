@@ -4,11 +4,8 @@
 }
 .loginwrap{
     margin: 5% auto;
-    /* background-color: rgb(161, 152, 152); */
      width: 50%;
-   
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+
 }
 .logo{
     text-align: center;
@@ -45,4 +42,11 @@ input[placeholder]{
 .error{
     border: red solid 1px;
     color: red;
+}
+
+@media(max-width:1200px){
+    .loginwrap{
+
+         width: 70%;
+    }
 }
