@@ -1,9 +1,9 @@
 /*here, this is only triggered if the error password regresion exp isnt contained in the password inputed */
 
  export function showError(element, errorMessage){
-    const errorBox = element.parentNode.querySelector("small")
+    // const errorBox = element.parentNode.querySelector("small")
     const errorLine= element.parentNode.querySelector("span")
-        errorBox.innerHTML = errorMessage
+        // errorBox.innerHTML = errorMessage
         errorLine.innerHTML=errorMessage
         element.className ="error"
      
